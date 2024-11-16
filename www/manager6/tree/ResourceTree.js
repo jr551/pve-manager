@@ -34,6 +34,12 @@ Ext.define('PVE.tree.ResourceTree', {
 		iconCls: 'fa fa-cube',
 		text: gettext('LXC Container'),
 	    },
+	    docker: {
+		iconCls: 'fa fa-docker',
+		text: 'Docker',
+		},
+
+
 	    template: {
 		iconCls: 'fa fa-file-o',
 	    },
@@ -51,8 +57,9 @@ Ext.define('PVE.tree.ResourceTree', {
 	    case 'lxc': return 0;
 	    case 'qemu': return 1;
 	    case 'node': return 2;
-	    case 'sdn': return 3;
-	    case 'storage': return 4;
+		case 'docker': return 3;
+	    case 'sdn': return 4;
+	    case 'storage': return 5;
 	    default: return 9;
 	}
     },
